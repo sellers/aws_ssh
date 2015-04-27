@@ -71,7 +71,7 @@ for region in aws_regions:
          
             # possible for an instance to not have a tag, which could mess up the order of things in the array..
 
-if len(discovered_instances) == 1:
+if len(discovered_instances['IP Address']) == 1:
     perform_ssh(discovered_instances['IP Address'][0])
 else:
     print tabulate.tabulate(discovered_instances, headers="keys", tablefmt="grid")
