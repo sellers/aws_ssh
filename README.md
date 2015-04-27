@@ -70,5 +70,5 @@ Last login: Mon Mar 23 17:14:18 2015 from 127.0.0.3
 jjshoe@www_01:~$
 ```
 
-You can specify as many advanced filters as you want by chaining -a over and over again. To see a list of what all can be passed in visit http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/ApiReference-cmd-DescribeInstances.html and search for ```Supported Filters```.
-
+You can specify as many advanced filters as you want by chaining -a over and over again. To see a list of valid advanced filters, search for ```Supported Filters``` on the following website:
+http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/ApiReference-cmd-DescribeInstances.html
