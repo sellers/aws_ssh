@@ -11,7 +11,7 @@ import tabulate
 
 aws_regions = boto.ec2.regions() 
 
-discovered_instances = collections.OrderedDict((('#', []), ('IP Address', []), ('Name', []), ('Region', [])))
+discovered_instances = collections.OrderedDict((('#', []), ('IP Address', []), ('Name', [])))
 
 parser = configargparse.ArgParser(default_config_files=['~/.aws_ssh'])
 group = parser.add_mutually_exclusive_group(required=True)
@@ -59,7 +59,6 @@ for region in aws_regions:
 
                 discovered_instances['#'].append(instance_counter)
                 discovered_instances['IP Address'].append(instance.ip_address)
-                discovered_instances['Region'].append(instance.region.name)
 
                 for tag in instance.tags:
                     if tag not in discovered_instances:
